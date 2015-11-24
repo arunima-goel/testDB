@@ -38,12 +38,9 @@ class FileResourceController {
 	       flash.message = 'file cannot be empty'
 	    }
 		
-		log.info("finding profile")
 		Profile profile = Profile.findByName("Aru");
-		log.info("found profile" + profile.name)
-		profile.imageUrl = grailsApplication.config.images.location.toString() + File.separatorChar + f.getOriginalFilename();
-		profile.save(failOnError: true);
-		log.info("saved profile")
+		profile.imageUrl = grailsApplication.config.images.location.toString() + f.getOriginalFilename() ;
+		profile.save(flush: true);
 		
 		redirect( action:list)
 	}
