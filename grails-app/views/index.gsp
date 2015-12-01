@@ -1,122 +1,112 @@
+
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
-		<style type="text/css" media="screen">
-			#status {
-				background-color: #eee;
-				border: .2em solid #fff;
-				margin: 2em 2em 1em;
-				padding: 1em;
-				width: 12em;
-				float: left;
-				-moz-box-shadow: 0px 0px 1.25em #ccc;
-				-webkit-box-shadow: 0px 0px 1.25em #ccc;
-				box-shadow: 0px 0px 1.25em #ccc;
-				-moz-border-radius: 0.6em;
-				-webkit-border-radius: 0.6em;
-				border-radius: 0.6em;
-			}
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>Ravishing.Me</title>
 
-			.ie6 #status {
-				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
-			}
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-			#status ul {
-				font-size: 0.9em;
-				list-style-type: none;
-				margin-bottom: 0.6em;
-				padding: 0;
-			}
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
 
-			#status li {
-				line-height: 1.3;
-			}
+    <!-- Web Fonts -->
+    <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
 
-			#status h1 {
-				text-transform: uppercase;
-				font-size: 1.1em;
-				margin: 0 0 0.3em;
-			}
+    <!-- CSS Global Compulsory-->
+    <asset:stylesheet src="bootstrap.min.css"/>
+    <asset:stylesheet src="style.css"/>
+    
+    <!-- CSS Implementing Plugins -->
+    <asset:stylesheet src="animate.css"/>
+    <asset:stylesheet src="line-icons.css"/>
+    <asset:stylesheet src="font-awesome.css"/>
+    
+    <!-- CSS Page Style -->    
+    <asset:stylesheet src="page_coming_soon_v1.css"/>
+    
+    <!-- CSS Theme -->    
+    <asset:stylesheet src="default.css" id="style_color"/>
+</head> 
 
-			#page-body {
-				margin: 2em 1em 1.25em 18em;
-			}
+<body class="coming-soon-page">    
 
-			h2 {
-				margin-top: 1em;
-				margin-bottom: 0.3em;
-				font-size: 1em;
-			}
+<div class="coming-soon-bg-cover"></div>
 
-			p {
-				line-height: 1.5;
-				margin: 0.25em 0;
-			}
+<!--=== Content Part ===-->    
+<div class="container cooming-soon-content">
+    <!-- Coming Soon Content -->
+    <div class="row">
+        <div class="col-md-12 coming-soon">
+            <h1>Ravishing.Me</span></h1>
+            <h2 class="test-info">Our Website is Coming Soon!</h2><br>
 
-			#controller-list ul {
-				list-style-position: inside;
-			}
+            <!-- Coming Soon Plugn -->
+            <div class="coming-soon-plugin">
+                <div id="defaultCountdown"></div>
+            </div>
+            <!-- End Coming Soon Plugn -->
+        </div>
+    </div>
+</div><!--/container-->
+<!--=== End Content Part ===-->
 
-			#controller-list li {
-				line-height: 1.3;
-				list-style-position: inside;
-				margin: 0.25em 0;
-			}
+<!--=== Sticky Footer ===-->
+<div class="sticky-footer">
+    <div class="container ">
+        <div class="row">
+            <div class="col-sm-6 text-left">
+                <p class="color-light">
+                    2015 &copy;Ravishing.me. All Rights Reserved
+                </p>  
+            </div>
+            <div class="col-sm-6 text-right">
+                <ul class="list-inline coming-soon-social">
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                </ul>            
+            </div>
+        </div>
+    </div>
+</div>
+<!--=== End Sticky-Footer ===-->
 
-			@media screen and (max-width: 480px) {
-				#status {
-					display: none;
-				}
+<!-- JS Global Compulsory -->           
+<asset:javascript src="jquery.min.js"/>
+<asset:javascript src="bootstrap.min.js"/>
+<asset:javascript src="jquery.plugin.js"/>
+<asset:javascript src="jquery.countdown.js"/>
+<asset:javascript src="jquery.backstretch.min.js"/>
+<asset:javascript src="app.js"/>
+<asset:javascript src="page_coming_soon.js"/>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        PageComingSoon.initPageComingSoon();
+    });
+</script>
 
-				#page-body {
-					margin: 0 1em 1em;
-				}
+<!-- Background Slider (Backstretch) -->
+<script>
+    $.backstretch([
+      "${assetPath(src: 'makeup.jpg')}",
+      ], {
+        fade: 1000,
+        duration: 7000
+    });
+</script>
 
-				#page-body h1 {
-					margin-top: 0;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div id="status" role="complementary">
-			<h1>Application Status</h1>
-			<ul>
-				<li>App version: <g:meta name="app.version"/></li>
-				<li>Grails version: <g:meta name="app.grails.version"/></li>
-				<li>Groovy version: ${GroovySystem.getVersion()}</li>
-				<li>JVM version: ${System.getProperty('java.version')}</li>
-				<li>Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</li>
-				<li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
-				<li>Domains: ${grailsApplication.domainClasses.size()}</li>
-				<li>Services: ${grailsApplication.serviceClasses.size()}</li>
-				<li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
-			</ul>
-			<h1>Installed Plugins</h1>
-			<ul>
-				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-					<li>${plugin.name} - ${plugin.version}</li>
-				</g:each>
-			</ul>
-		</div>
-		<div id="page-body" role="main">
-			<h1>Welcome to Grails</h1>
-			<p>Congratulations, you have successfully started your first Grails application! At the moment
-			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
-			   content you may choose. Below is a list of controllers that are currently deployed in this application,
-			   click on each to execute its default action:</p>
+<!--[if lt IE 9]>
+    <script src="assets/plugins/respond.js"></script>
+    <script src="assets/plugins/html5shiv.js"></script>
+    <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+<![endif]-->
 
-			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
-				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
-				</ul>
-			</div>
-		</div>
-	</body>
-</html>
+</body>
+</html> 
