@@ -25,7 +25,7 @@
     <!-- CSS Implementing Plugins -->
     <asset:stylesheet src="animate.css"/>
     <asset:stylesheet src="line-icons.css"/>
-    <asset:stylesheet src="font-awesome.css"/>
+    <asset:stylesheet src="plugins/font-awesome/css/font-awesome.css"/>
     
     <!-- CSS Page Style -->    
     <asset:stylesheet src="page_coming_soon_v1.css"/>
@@ -46,11 +46,11 @@
             <h1>Ravishing.Me</span></h1>
             <h2 class="test-info">Our Website is Coming Soon!</h2><br>
 
-            <!-- Coming Soon Plugn -->
+            <!-- Coming Soon Plugin -->
             <div class="coming-soon-plugin">
                 <div id="defaultCountdown"></div>
             </div>
-            <!-- End Coming Soon Plugn -->
+            <!-- End Coming Soon Plugin -->
         </div>
     </div>
 </div><!--/container-->
@@ -67,9 +67,11 @@
             </div>
             <div class="col-sm-6 text-right">
                 <ul class="list-inline coming-soon-social">
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    
+                    <li><a href="https://www.facebook.com/Ravishingme-1621934231391175" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/Ravishingme-1621934231391175" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+                    <li><a href="https://www.facebook.com/Ravishingme-1621934231391175" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/Ravishingme-1621934231391175" target="_blank"><i class="fa fa-facebook"></i></a></li>
                 </ul>            
             </div>
         </div>
@@ -99,6 +101,13 @@
       ], {
         fade: 1000,
         duration: 7000
+    });
+
+    $(function () {
+    	var austDay = new Date();
+        austDay = new Date(2018, 1 - 1, 26);
+        $('#defaultCountdown').countdown({until: austDay});
+        $('#year').text(austDay.getFullYear());
     });
 </script>
 
