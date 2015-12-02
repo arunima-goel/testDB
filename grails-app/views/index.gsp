@@ -68,9 +68,8 @@
             <div class="col-sm-6 text-right">
                 <ul class="list-inline coming-soon-social">
                     
-                    <li><a href="https://www.facebook.com/Ravishingme-1621934231391175" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://www.facebook.com/Ravishingme-1621934231391175" target="_blank"><i class="fa fa-wordpress"></i></a></li>
-                    <li><a href="https://www.facebook.com/Ravishingme-1621934231391175" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/ravishingdotme" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://ravishingdotme.wordpress.com/" target="_blank"><i class="fa fa-wordpress"></i></a></li>
                     <li><a href="https://www.facebook.com/Ravishingme-1621934231391175" target="_blank"><i class="fa fa-facebook"></i></a></li>
                 </ul>            
             </div>

@@ -1,11 +1,6 @@
 dataSource {
     pooled = true
     jmxExport = true
-    driverClassName = "org.postgresql.Driver"
-    username = "postgres"
-    password = "arunima()"
-    url = "jdbc:postgresql:localhost:5432/ravme"
-	dialect = "testDB.TableNameSequencePostgresDialect"
     dbCreate = update
 }
 hibernate {
@@ -22,19 +17,16 @@ environments {
     development {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:postgresql://localhost:5432/ravme"
         }
     }
     test {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:postgresql://localhost:5432/ravme"
         }
     }
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:postgresql://localhost:5432/ravme"
             properties {
                // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
                jmxEnabled = true
